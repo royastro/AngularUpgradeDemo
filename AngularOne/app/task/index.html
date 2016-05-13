@@ -1,0 +1,18 @@
+﻿<h3>Tasks</h3>
+<div class="bs-example" data-example-id="striped-table">
+    <button class="btn btn-primary" data-ng-click="vm.navigation.createTask()">New Task</button>
+    <table class="table table-striped">
+        <thead>
+            <tr> <th>ID</th> <th>Project Name</th> <th>Task</th> <th>Status</th><th>Action</th> </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="task in vm.taskList"> 
+                <th scope="row"><a data-ng-click="vm.navigation.editTask(task.Id)">{{task.Id}}</a></th> 
+                <td>{{task.ProjectName}}</td> 
+                <td>{{task.TaskName}}</td> 
+                <td>{{task.Status}}</td> 
+                <td><a data-ng-click="vm.navigation.editTask(task.Id)">Edit</a>&nbsp;<a data-ng-click="vm.navigation.deleteTask(task.Id)">Delete</a></td> 
+            </tr>            
+        </tbody>
+    </table>
+</div>
